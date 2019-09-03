@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="username">
+        <label for="username">Username</label>
+        <input type="text" name="username" id='inp_username'>
+    </div>
+    <div id="password">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id='inp_password'>
+    </div>
+    <button onclick="signin()">Sign In</button>
+    <p id='login_result'></p>
+</body>
+
+
+</html>
+<script>
+    function signin() {
+        val_user = "correctUser";
+        val_pass = "disEsPassw0rd";
+        inp_user = document.getElementById("inp_username").value;
+        inp_pass = document.getElementById("inp_password").value;
+        console.log("Login Result:" + (inp_user == val_user && inp_pass == val_pass))
+        if (inp_user == val_user && inp_pass == val_pass) {
+            document.getElementById("login_result").innerHTML = "Pass"
+            document.location.href = "index.html";
+            localStorage.setItem('login', true)
+
+        } else {
+            document.getElementById("login_result").innerHTML = "Fail"
+            localStorage.setItem('login', false)
+        }
+        console.log(localStorage)
+    };
+</script>
