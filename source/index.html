@@ -8,7 +8,6 @@
     <title>Document</title>
 </head>
 <script>
-    console.log(localStorage.getItem("login"))
     if (localStorage.getItem("login") != "true") {
         document.location.href = "login.html";
     }
@@ -18,12 +17,5 @@
     <p>Home page</p>
     <button onclick="logout()">log out</button>
 </body>
-
-<script>
-    function logout() {
-        localStorage.setItem("login", false)
-        document.location.href = "login.html";
-    }
-</script>
 
 </html>
