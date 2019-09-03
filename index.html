@@ -16,7 +16,13 @@
 
 <body>
     <p>Home page</p>
+    <button onclick="logout()">log out</button>
 </body>
 
+<script>
+    function logout() {
+        localStorage.setItem("login") = false
+    }
+</script>
 
 </html>
