@@ -287,6 +287,25 @@ footer * {
     .container {
         width: 320px;
     }
+    .logo {
+        padding: 10px 30px;
+        margin: 0px 100px 0px 0px;
+        display: inline-block;
+        border-radius: 3px;
+    }
+    .practice-robot-btn {
+        padding: 15px 20px;
+        margin: 60px auto;
+        width: 200px;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        border-radius: 3px;
+        background: #ffc117;
+        transition: 0.5s;
+        font-size: 22px;
+    }
 }
 
 @media screen and (min-width: 960px) {
