@@ -1,0 +1,121 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: 'Manjari', sans-serif;
+}
+section:nth-child(odd){
+    background: #f8faee;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    background: #ffc117;
+    /* background: #8c8c8ccc; */
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    color: rgb(42, 42, 42);
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 30px;
+    margin: 0px 40px 0px 0px;
+    display: inline-block;
+    border-radius: 3px;
+}
+.menu-list{
+    padding: 10px 30px;
+    margin: 0px;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menu-list:hover{
+    background: rgb(241, 255, 0);
+    transition: 0.5s;
+}
+.active{
+    background: rgb(241, 255, 0);
+    transition: 0.5s;
+    font-weight: 600;
+}
+.button{
+    cursor: pointer;
+}
+.menu-list > a{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+.container{
+    margin: auto;
+    width: 970px;
+    height: 600px;
+    padding: 15px;
+}
+.main-content{
+    margin: 53px 0;
+    z-index: -1;
+}
+.img-small{
+    width: 300px;
+}
+.img-cover{
+    background-image: url(../images/cover.jpg);
+    background-size: cover;
+    filter: blur(1px)
+}
+.center{
+    text-align: center;
+}
+.main-heading{
+    font-size: 30px;
+}
+.am-context{
+    filter: blur(0px);
+    letter-spacing: 4px;
+}
+
+.email{
+    text-decoration: none;
+    color: black;
+}
+.non-decoration{
+    text-decoration: none;
+    list-style: none;
+}
+.practice-robot-btn{
+    padding: 15px 20px;
+    margin: 20px auto;
+    width: 300px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 2px;
+    background: #ffc117;
+    box-shadow: 2px 3px rgb(243, 243, 243);
+    transition: 0.5s;
+}
+
+.practice-robot-btn:hover{
+    transition: 0.5s;
+    background: rgb(241, 255, 0);
+}

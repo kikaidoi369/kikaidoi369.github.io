@@ -11,7 +11,7 @@ function signin() {
     console.log("Login Result:" + (inp_user == val_user && inp_pass == val_pass))
     if (inp_user == val_user && inp_pass == val_pass) {
         document.getElementById("login_result").innerHTML = "Pass"
-        document.location.href = "index.html";
+        document.location.href = "home.html";
         localStorage.setItem('login', true)
 
     } else {
@@ -20,3 +20,14 @@ function signin() {
     }
     console.log(localStorage)
 };
+
+function scrollToId(id) {
+    menu = ["about_me-menu","experience-menu","my_contact-menu","robot_example-menu"]
+    var elem = document.getElementById(id);
+    elem.scrollIntoView({ block: "center" });
+    menu.forEach(menu_id => {
+        document.getElementById(menu_id).classList.remove('active');
+    });
+    document.getElementById(id+"-menu").classList.add("active")
+    console.log(id)
+}
