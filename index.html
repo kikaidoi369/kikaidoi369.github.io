@@ -2,24 +2,23 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script type="text/javascript" src="../asset/function.js"></script>
-    <script src="./asset/font-icon.js"></script>
     <link rel="stylesheet" href="../asset/style.css">
+    <script type="text/javascript" src="../asset/function.js"></script>
+    <script type="text/javascript" src="./asset/font-icon.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar shadow">
             <ul class="menu">
                 <li class="logo">Phonkornkrit</li>
                 <li id="about_me-menu" class="menu-list" onclick="scrollToId('about_me')">About Me</li>
                 <li id="experience-menu" class="menu-list" onclick="scrollToId('experience')">Experience</li>
-                <li id="my_contact-menu" class="menu-list" onclick="scrollToId('my_contact')">My Contact</li>
+                <!-- <li id="my_contact-menu" class="menu-list" onclick="scrollToId('my_contact')">My Contact</li> -->
                 <li id="robot_example-menu" class="menu-list" onclick="scrollToId('robot_example')">Robot Example</li>
             </ul>
         </nav>
@@ -32,44 +31,70 @@
                     <h4>
                         <i class="fas fa-mobile-alt"></i> +6686-453-6156
                         <a class="email" href="mailto: phonkornkrit@gmail.com">
-                            <i class="fas fa-envelope"></i>phonkornkrit@gmail.com
+                            <i class="fas fa-envelope"></i> phonkornkrit@gmail.com
                         </a>
                     </h4>
                 </div>
             </div>
         </section>
         <section id="experience">
-            <div class="container">
-                <ul>
-                    <li>Automation Tester @Mimo Tech</li>
-                    <li>Software Quality Assurance @Orcsoft co.,ltd</li>
-                </ul>
-            </div>
-        </section>
-        <section id="my_contact">
-            <div class="container">
-                My Contact
-            </div>
-        </section>
-        <section id="robot_example">
-            <div class="container">
-                <div class="center" style="margin-top:10%;">
-                    <div>
-                        <h2>Let's go to Robot Framework Playground...</h2>
-                        <p>If you're looking for a place to improve your automation skills. Do not miss it!</p>
+            <div class="container center">
+                <h2>Work Experiences</h2>
+                <div class="four-shadow flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="./images/ais.png" alt=""> </div>
+                        <div id="ais" class="flip-box-back">
+                            <h3>AIS</h3>
+                            <hr>
+                            <p>I was a staff in the Automate Test Center Team</p>
+                        </div>
                     </div>
-                    <a class="non-decoration" href="./login.html">
-                        <div class="practice-robot-btn">Practice Robot</div>
-                    </a>
                 </div>
-
+                <div class="four-shadow flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="./images/orcsoft.png" alt="">
+                        </div>
+                        <div id="orcsoft" class="flip-box-back">
+                            <h3>Orcsoft</h3>
+                            <hr>
+                            <p>I am working for Krung Thai Bank (KTB) as an oursource.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
     </div>
     </section>
+    <!-- <section id="my_contact">
+        <div class="container">
+            My Contact
+        </div>
+    </section> -->
+    <section id="robot_example">
+        <div class="container">
+            <div class="center" style="margin-top:10%;">
+                <div>
+                    <h2>Let's go to Robot Framework Playground...</h2>
+                    <p>If you're looking for a place to improve your automation skills. Do not miss it!</p>
+                </div>
+                <a class="non-decoration" href="./login.html">
+                    <div class="practice-robot-btn shadow">Practice Robot</div>
+                </a>
+            </div>
+
+        </div>
+        </div>
+    </section>
 
     </div>
-    <footer>
-        
+    <footer class="center">
+        <div>
+            <p class="text-footer">Connect with me...</p>
+            <a class="icon-footer fas fa-phone-square-alt" href="tel:+66-86453-6156"></a>
+            <a class="icon-footer fas fa-envelope" href="mailto: phonkornkrit@gmail.com"></a>
+            <a class="icon-footer fab fa-line" href="http://line.me/ti/p/~jayjay369" target="_blank"></a>
+        </div>
     </footer>
 
 </body>

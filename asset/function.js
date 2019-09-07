@@ -22,12 +22,12 @@ function signin() {
 };
 
 function scrollToId(id) {
-    menu = ["about_me-menu","experience-menu","my_contact-menu","robot_example-menu"]
+    menu = ["about_me-menu", "experience-menu", "robot_example-menu"]
     var elem = document.getElementById(id);
     elem.scrollIntoView({ block: "center" });
     menu.forEach(menu_id => {
         document.getElementById(menu_id).classList.remove('active');
     });
-    document.getElementById(id+"-menu").classList.add("active")
+    document.getElementById(id + "-menu").classList.add("active")
     console.log(id)
 }
