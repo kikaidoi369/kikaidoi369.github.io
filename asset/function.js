@@ -15,7 +15,7 @@ function signin() {
         localStorage.setItem('login', true)
 
     } else {
-        document.getElementById("login_result").innerHTML = "Fail"
+        document.getElementById("login_result").innerHTML = "Invalid Login"
         localStorage.setItem('login', false)
     }
     console.log(localStorage)

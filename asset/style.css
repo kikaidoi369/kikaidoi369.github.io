@@ -26,6 +26,10 @@ img {
     width: 400px;
 }
 
+/* input[type=radio]{
+    display:inline-block;
+} */
+
 .navbar {
     overflow: hidden;
     position: fixed;
@@ -268,6 +272,10 @@ footer * {
 .text-footer {
     size: 16px;
     letter-spacing: 2px;
+}
+
+.topic-header{
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 960px) {

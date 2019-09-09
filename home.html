@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script type="text/javascript" src="../asset/function.js"></script>
     <link rel="stylesheet" href="../asset/style.css">
+    <script type="text/javascript" src="../asset/function.js"></script>
+    <script type="text/javascript" src="./asset/font-icon.js"></script>
 </head>
 <script>
     if (localStorage.getItem("login") != "true") {
@@ -16,8 +17,53 @@
 </script>
 
 <body>
-    <p>Home page</p>
-    <button onclick="logout()">log out</button>
+    <header>
+        <nav class="navbar shadow">
+            <ul class="menu">
+                <li class="logo">Phonkornkrit</li>
+                <li id="about_me-menu" class="menu-list" onclick="scrollToId('about_me')">About Me</li>
+                <li id="experience-menu" class="menu-list" onclick="scrollToId('experience')">Experience</li>
+                <!-- <li id="my_contact-menu" class="menu-list" onclick="scrollToId('my_contact')">My Contact</li> -->
+                <li id="robot_example-menu" class="menu-list" onclick="scrollToId('robot_example')">Robot Example</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <section>
+                <h2>Robot Playground</h2>
+                <hr>
+            </section>
+            <section>
+                <h3 class="topic-header">Profile</h3>
+                <div>
+                    <label for="first-name">Firstname: </label>
+                    <input name="first-name" type="text">
+                </div>
+                <div>
+                    <label for="last-name">Lastname: </label>
+                    <input name="last-name" type="text">
+                </div>
+                <div>
+                    <label for="gender">Gender: </label>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                </div>
+            </section>
+        </div>
+    </div>
+    <div>
+        <button onclick="logout()">log out</button>
+    </div>
+    <footer class="center">
+        <div>
+            <p class="text-footer">Connect with me...</p>
+            <a class="icon-footer fas fa-phone-square-alt" href="tel:+66-86453-6156"></a>
+            <a class="icon-footer fas fa-envelope" href="mailto: phonkornkrit@gmail.com"></a>
+            <a class="icon-footer fab fa-line" href="http://line.me/ti/p/~jayjay369" target="_blank"></a>
+        </div>
+    </footer>
 </body>
 
 </html>
