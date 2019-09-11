@@ -22,6 +22,10 @@ section:nth-child(odd) {
     padding: 0;
 }
 
+input{
+    margin-left: 20px;
+}
+
 img {
     width: 400px;
 }
@@ -230,6 +234,9 @@ h3 {
     background-color: #bbb;
     color: black;
 }
+.hide{
+    visibility: hidden;
+}
 
 
 /* Style the back side */
@@ -275,7 +282,7 @@ footer * {
 }
 
 .topic-header{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 960px) {
@@ -347,4 +354,41 @@ footer * {
     .main-content {
         margin-top: 30px
     }
+}
+
+.input-form{
+    text-align: center;
+}
+
+.input-field{
+    display: inline-block;
+    padding: 20px 30px;
+    margin: 10px;
+}
+.right{
+    right: 50%;
+}
+
+.confirm-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.confirm-btn:hover {
+    transition: 0.5s;
+    background: rgb(158, 253, 34);
+}
+
+.error{
+    background: rgb(255, 171, 171);
+}
+
+.require{
+    color: red;
+    font-size: 14px;
 }

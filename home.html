@@ -21,10 +21,10 @@
         <nav class="navbar shadow">
             <ul class="menu">
                 <li class="logo">Phonkornkrit</li>
-                <li id="about_me-menu" class="menu-list" onclick="scrollToId('about_me')">About Me</li>
-                <li id="experience-menu" class="menu-list" onclick="scrollToId('experience')">Experience</li>
-                <!-- <li id="my_contact-menu" class="menu-list" onclick="scrollToId('my_contact')">My Contact</li> -->
-                <li id="robot_example-menu" class="menu-list" onclick="scrollToId('robot_example')">Robot Example</li>
+                <li id="about_me-menu" class="menu-list hide" onclick="scrollToId('about_me')">About Me</li>
+                <li id="experience-menu" class="menu-list hide" onclick="scrollToId('experience')">Experience</li>
+                <li id="robot_example-menu" class="menu-list hide" onclick="scrollToId('robot_example')">Robot Example
+                </li>
             </ul>
         </nav>
     </header>
@@ -36,21 +36,82 @@
             </section>
             <section>
                 <h3 class="topic-header">Profile</h3>
-                <div>
-                    <label for="first-name">Firstname: </label>
-                    <input name="first-name" type="text">
-                </div>
-                <div>
-                    <label for="last-name">Lastname: </label>
-                    <input name="last-name" type="text">
-                </div>
-                <div>
-                    <label for="gender">Gender: </label>
-                    <input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
-                    <input type="radio" name="gender" value="other"> Other
-                </div>
+                <center>
+                    <div id="first-nameForm" class="input-field">
+                        <label for="first-name">Firstname: <span class="require">*</span></label>
+                        <input id="first-name" name="first-name" type="text">
+                    </div>
+                    <div id="last-nameForm" class="input-field">
+                        <label for="last-name">Lastname: <span class="require">*</span></label>
+                        <input id="last-name" name="last-name" type="text">
+                    </div>
+                    <div id="genderForm" class="input-field">
+                        <label for="gender">Gender: <span class="require">*</span></label>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                        <input type="radio" name="gender" value="Other"> Other
+                    </div>
+                    <div id="birthDateForm" class="input-field">
+                        <label for="birthdate">Birth Date (DD/MM/YYYY) : <span class="require">*</span></label>
+                        <select name="birthdate" id="dBirth">
+                            <option value="0">--</option>
+
+                        </select>
+                        /
+                        <select name="birth-date" id="mBirth">
+                            <option value="0">--</option>
+                        </select>
+                        /
+                        <select name="birth-date" id="yBirth">
+                            <option value="0000">--</option>
+                        </select>
+                    </div>
+                </center>
             </section>
+            <section>
+                <h3 class="topic-header">Confirmation Document & Agreement</h3>
+                <center>
+                    <hr>
+                    <div id="docForm" class="input-field">
+                        <span>1.</span>
+                        <label>Document 1<span class="require">*</span></label>
+                        <input name="document" type="file">
+                        <span>2.</span>
+                        <label>Document 2<span class="require">*</span></label>
+                        <input name="document" type="file">
+                    </div>
+                    <br>
+                    <div id="agreeForm" class="input-field">
+                        <input id="agreement" name="agreement" type="checkbox"><span class="require">*</span>
+                        <label id="agreement" for="agreement">Agree to insert data</label>
+                        <input id="agreement" name="agreement" type="checkbox"><span class="require">*</span>
+                        <label id="agreement" for="agreement">Confirm document is valid </label>
+                    </div>
+                    <br>
+                    <button class="confirm-btn" onclick="confirmProfile()">Confirm</button>
+                    <p id="tran-stat"></p>
+                </center>
+            </section>
+            <!-- <section>
+                <center>
+                    <table id="data">
+                        <thead>
+                            <tr>
+                                <th>no</th>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Gender</th>
+                                <th>Birth Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-content">
+                            <tr>
+                                <td colspan="5" style="text-align: center;">No data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+            </section> -->
         </div>
     </div>
     <div>
@@ -65,5 +126,6 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="./asset/home.js"></script>
 
 </html>
