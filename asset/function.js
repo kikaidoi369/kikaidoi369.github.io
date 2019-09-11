@@ -41,21 +41,21 @@ function confirmProfile() {
     var agree = checkAgree()
     console.log(document)
     if ((firstname && lastname && gender) != false) {
-        var text_firstname  = "Firstname: " + firstname
-        var text_lastname   = "Lastname: " + lastname
-        var text_gender     = "Gender: " + gender
-        var text_birthdate  = "BirthDate: " + birthdate
-        var text_document   = "Document: " + document
-        var text_agree      = "Agreement: " + agree
+        var text_firstname = "Firstname: " + firstname
+        var text_lastname = "Lastname: " + lastname
+        var text_gender = "Gender: " + gender
+        var text_birthdate = "BirthDate: " + birthdate
+        var text_document = "Document: " + document
+        var text_agree = "Agreement: " + agree
         alert(
-                text_firstname + "\n"
+            text_firstname + "\n"
             + text_lastname + "\n"
             + text_gender + "\n"
             + text_birthdate + "\n"
             + text_document + "\n"
             + text_agree
         )
-        insertToTable(firstname,lastname,gender,birthdate)
+        insertToTable(firstname, lastname, gender, birthdate)
     }
 }
 
@@ -134,16 +134,41 @@ function checkDocument() {
 function checkAgree() {
     var form = document.getElementById("agreeForm")
     var agreeCb = document.getElementsByName("agreement")
-    if (agreeCb[0].checked == true && agreeCb[1].checked == true){
+    if (agreeCb[0].checked == true && agreeCb[1].checked == true) {
         form.classList.remove('error');
         return "Agree"
     }
     form.classList.add("error")
     return false
 }
-// function insertToTable(firstname,lastname,gender,birthdate){
-//     var tran_stat = document.getElementById("tran-stat")
-//     tran_stat.innerText = "Success"
-//     var tBody = document.getElementById("table-content")
+function insertToTable(firstname, lastname, gender, birthdate) {
+    var tran_stat = document.getElementById("tran-stat")
+    tran_stat.innerText = "Success"
+    var tBody = document.getElementById("table-content")
+    console.log(tBody.childElementCount)
+    var nodata = document.getElementById("no-data")
+    if (nodata != null) {
+        nodata.remove()
+    }
+    console.log(tBody.childElementCount)
 
-// }
+    var row = document.createElement('tr')
+
+    var td1 = document.createElement('td')
+    td1.appendChild(document.createTextNode(tBody.childElementCount + 1))
+    var td2 = document.createElement('td')
+    td2.appendChild(document.createTextNode(firstname))
+    var td3 = document.createElement('td')
+    td3.appendChild(document.createTextNode(lastname))
+    var td4 = document.createElement('td')
+    td4.appendChild(document.createTextNode(gender))
+    var td5 = document.createElement('td')
+    td5.appendChild(document.createTextNode(birthdate))
+
+    row.appendChild(td1)
+    row.appendChild(td2)
+    row.appendChild(td3)
+    row.appendChild(td4)
+    row.appendChild(td5)
+    tBody.appendChild(row)
+}
