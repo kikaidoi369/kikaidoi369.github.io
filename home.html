@@ -21,10 +21,7 @@
         <nav class="navbar shadow">
             <ul class="menu">
                 <li class="logo">Phonkornkrit</li>
-                <li id="about_me-menu" class="menu-list hide" onclick="scrollToId('about_me')">About Me</li>
-                <li id="experience-menu" class="menu-list hide" onclick="scrollToId('experience')">Experience</li>
-                <li id="robot_example-menu" class="menu-list hide" onclick="scrollToId('robot_example')">Robot Example
-                </li>
+                <li id="robot_example-menu" class="menu-list logout" onclick="logout()">log out</li>
             </ul>
         </nav>
     </header>
@@ -71,7 +68,6 @@
             <section>
                 <h3 class="topic-header">Confirmation Document & Agreement</h3>
                 <center>
-                    <hr>
                     <div id="docForm" class="input-field">
                         <span>1.</span>
                         <label>Document 1<span class="require">*</span></label>
@@ -91,6 +87,7 @@
                     <button class="confirm-btn" onclick="confirmProfile()">Confirm</button>
                     <p id="tran-stat"></p>
                 </center>
+                <hr>
             </section>
             <section>
                 <h3 class="topic-header">Data Table</h3>
@@ -115,9 +112,7 @@
             </section>
         </div>
     </div>
-    <div>
-        <button onclick="logout()">log out</button>
-    </div>
+
     <footer class="center">
         <div>
             <p class="text-footer">Connect with me...</p>

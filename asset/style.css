@@ -386,6 +386,7 @@ footer * {
 
 .confirm-btn {
     padding: 5px 10px;
+    margin: 5px 10px;
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -406,4 +407,9 @@ footer * {
 .require{
     color: red;
     font-size: 14px;
+}
+
+.logout{
+    margin-left: 250px;
+    background: rgb(248, 107, 107);
 }

@@ -13,9 +13,9 @@
 
 <body>
     <div class="container center">
-        <h2>Welcome to Robot Framework Playground</h2>
-        <div>
-            <div id="username">
+        <h2 style="background: #ffc117;padding: 10px;">Welcome to Robot Framework Playground</h2>
+        <div style="background: rgb(255, 255, 255);">
+            <div id="username" class="input-field">
                 <label for="username">Username: </label>
                 <input type="text" name="username" id='inp_username'>
             </div>
@@ -23,7 +23,10 @@
                 <label for="pass">Password: </label>
                 <input type="password" name="pass" id='inp_password'>
             </div>
-            <button onclick="signin()">Sign In</button>
+            <div class="main-content">
+                <button class="confirm-btn" onclick="signin()">Sign In</button>
+                <a href="index.html"><button class="confirm-btn">Back to Page</button></a>
+            </div>
             <p id='login_result'></p>
         </div>
     </div>
