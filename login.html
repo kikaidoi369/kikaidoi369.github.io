@@ -30,6 +30,11 @@
             <p id='login_result'></p>
         </div>
     </div>
+    <p>
+        Scroll Page to Element
+            [Arguments]  ${locator}
+            Run Keyword And Ignore Error  Execute Javascript  document.evaluate("${locator}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView({block:'center'})
+    </p>
 </body>
 
 
